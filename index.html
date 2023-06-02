@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Assets/Logo/logo-icon-navbar.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <title>SportSize</title>
+    
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img class="ms-2" width="30px" height="27px" src="./Assets/Logo/logo-icon-navbar.png" alt="logo de la marca"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarContenido">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-center navtext">
+              <li class="nav-item">  
+                <a href="#" class="text-decoration-none nav-link activate" data-bs-toggle="modal" data-bs-target="#modalRegistrate">Registrate</a>  
+                <div class="modal fade" id="modalRegistrate" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                  <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modalLabel">Regístrate</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                  <form> 
+                    <div class="mb-3">
+                      <label for="fullName" class="form-label">Nombre Completo</label>
+                      <input type="Text" class="form-control" id="fulName">
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="emailLabel" class="form-label">Correo Electronico</label>
+                      <input type="email" class="form-control" id="emailLabel" aria-describedby="emailHelp"> 
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      <div class="mb-3">
+                        <label for="userPass" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="userPass">
+                      </div>
+                      <div class="mb-3">
+                        <label for="passConfirm" class="form-label">Confirmar contraseña</label>
+                        <input type="password" class="form-control" id="passConfirm">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <a href="./pages/error404.html" type="button" class="btn btn-primary">Enviar</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Todos los productos</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./pages/secciondamas.html">Mujer</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./pages/seccionhombres.html">Hombre</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./pages/seccionninios.html">Niños</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./pages/sobrenosotros.html">Sobre Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <div class="boton-carrito d-flex justify-content-center p-1 ms-3" id="carritoHome">
+                  <a  data-bs-toggle="offcanvas" href="#offcanvasCarrito" role="button" aria-controls="offcanvasExample">
+                    <img src="./Assets/shopping-cart.png" alt="carrito-compras" class="w-100">
+                  </a>
+                </div>
+              </li>
+            </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 buscar" type="search" placeholder="Buena suerte!" aria-label="Search">
+            <a href="./pages/error404.html" class="btn btn-outline-success " type="submit">Buscar</a>
+          </form>
+        </nav>
+        </div>             
+    </header>
+    
+    <main>
+      <section class="container-fluid row mx-0 p-0">
+        <div class="col-12 text-center p-0 mt-4 mb-4" >
+          <img src="./Assets/Logo/logo-presentacion.png" alt="logo de la marca" height="70px"> 
+        </div>
+        
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="carritoLabel">
+          <div class="offcanvas-header">
+            
+            <h4 class="offcanvas-title" id="carritoLabel">Carrito</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Precio unitario</th>
+                  <th scope="col">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+              </tbody>
+            </table>
+            <div class="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="./Assets/bolsa-de-la-compra.png" width="80px" height="auto" alt="">
+              <p>Su carrito está vacío</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 p-0" >
+          <img class="foto w-100" src="./Assets/imagenes de presentacion/primera-imagen.jpg" class="w-100" alt="imagen de presentacion">
+        </div>
+
+        <div class="d-none d-md-flex col-md-6 col-lg-4 p-0">
+          <img class="foto w-100" src="./Assets/imagenes de presentacion/segunda-imagen.jpg" class="w-100" alt="imagen de presentacion">
+        </div> 
+
+        <div class="d-none d-lg-flex col-lg-4 p-0 presentacion-imagen-width">
+          <img class="foto w-100" src="./Assets/imagenes de presentacion/tercer-imagen.jpg" class="w-100" alt="imagen de presentacion">
+          </div>
+      </section>
+          
+      <section>
+        <div class="text-container text-center mt-5 mb-5">
+          <h1 class="fonts3">NEW COLLECTION</h1>
+          <h6 class="fonts3">GET READY!</h6>
+        </div> 
+      </section>    
+
+      <section class="d-flex justify-content-around flex-wrap my-5 backgroundcolor-sections p-5">
+        <div>
+          <a href="./pages/seccionhombres.html" ><img class="imagen mb-5" src="./Assets/cards de secciones/hombre.jpg" alt="Imagen de seccion de hombre"></a>
+        </div>
+        <div>
+          <a href="./pages/secciondamas.html"><img class="imagen mb-5" src="./Assets/cards de secciones/mujer.jpg" alt="Imagen de seccion de mujer"></a>
+        </div>
+        <div>
+          <a href="./pages/seccionninios.html"><img class="imagen" src="./Assets/cards de secciones/niño.jpg" alt="Imagen de seccion de niño"></a>
+        </div>
+      </section>
+
+      <section>
+        <div class="text-container text-center mt-5 mb-5">
+          <h1 class="fonts3">ESTILO Y LIBERTAD EN MOVIMIENTO</h1>
+          <h6 class="fonts3">KEEP ON MOVING!</h6>
+        </div> 
+      </section>
+      <section class="container-fluid contenedor-carrusel pt-4 text-center">
+        <div id="carruselGrande" class="carousel slide w-100 d-none d-md-flex p-2" data-bs-ride="carousel">
+          <div class="carousel-inner w-100 ">
+            <div class="carousel-item active">
+              <div class="d-none d-md-flex justify-content-evenly">
+                <div><video src="./Assets/videos/video-mujer-1.mp4" width="400px" height="auto" autoplay muted loop></video></div>
+                <div><video src="./Assets/videos/video-hombre-1.mp4" width="400px" height="auto" autoplay muted loop></video></div>
+                <div><video src="./Assets/videos/video-niño-1.mp4" width="400px" height="auto" autoplay muted loop></video></div>  
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-none d-md-flex justify-content-evenly">
+                <div><video src="./Assets/videos/video-mujer-2.mp4" width="400px" height="auto" autoplay muted loop></video></div>
+                <div><video src="./Assets/videos/video-hombre-2.mp4" width="400" height="auto" autoplay muted loop></video></div>
+                <div><video src="./Assets/videos/video-niño-2.mp4" width="400px" height="auto" autoplay muted loop></video></div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselGrande" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselGrande" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div id="carruselCel" class="carousel slide w-100 d-flex d-md-none " data-bs-ride="carousel">
+          <div class="carousel-inner w-100 ">
+            <div class="carousel-inner w100 d-flex d-md-none ">
+              <div class="carousel-item active">
+                <div class="d-flex justify-content-center"><video src="./Assets/videos/video-mujer-1.mp4" width="400px" height="auto" autoplay muted loop></video></div>
+              </div>
+              <div class="carousel-item ">
+                <div class="d-flex justify-content-center"><video src="./Assets/videos/video-hombre-1.mp4" width="400px" height="auto" autoplay muted loop></video></div>
+              </div>
+              <div class="carousel-item  ">
+                <div class="d-flex justify-content-center"><video src="./Assets/videos/video-niño-1.mp4" width="400px" height="auto" autoplay muted loop></video></div>
+              </div>
+              <div class="carousel-item  ">
+                <div class="d-flex justify-content-center"><video src="./Assets/videos/video-mujer-2.mp4" width="400px" height="auto" autoplay muted loop></video></div>
+              </div>
+              <div class="carousel-item ">
+                <div class="d-flex justify-content-center"><video src="./Assets/videos/video-hombre-2.mp4" width="400px" height="auto" autoplay muted loop></video></div>
+              </div>
+              <div class="carousel-item ">
+                <div class="d-flex justify-content-center"><video src="./Assets/videos/video-niño-2.mp4" width="400px" height="auto" autoplay muted loop></video></div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselCel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselCel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class=" container-fluid row p-4  footer-container mx-0">
+        <div class="col-12 col-md-3 p-3 footer-div row gap-2">
+          <h4>Unete a nuestro newsletter</h4>
+          <p>Tendras acceso a las ultimas tendencias, ofertas y más.</p>
+          <input type="email" name="userMail" id="mailUsuario" placeholder="Tu correo" class="form-control-lg col-md-12 col-lg-8 text-footer ms-2 mb-2">
+          <button type="submit" class="btn  btn-bd-primary col-md-10 col-lg-7 ms-2" data-bs-toggle="modal" data-bs-target="#suscribirseIndex">SUSCRIBIRSE</button>
+          <div class="modal fade" id="suscribirseIndex" tabindex="-1" aria-labelledby="suscribirseIndex" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="suscribirseIndex">Registro Exitoso</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex justify-content-center">
+                    <img class=logoModal src="./Assets/Logo/logo-icon-navbar.png" alt="icono">
+                  </div>
+                  <h5 class="">Bienvenido!</h5>
+                  <h6></h6>
+                  <h6>En unos minutos comprueba tu correo para confirmar tu suscripción a SportSize.</h6>
+                  <h6>Podrás estar al tanto sobre las ultimas tendencias, novedades, ofertas exclusivas para socios, y mucho más! </h6>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary botonCerrar" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 p-3 footer-div">
+          <h4>AYUDA</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="./pages/error404.html">Envíos y Entregas</a></li>
+            <li class="list-group-item"><a href="./pages/error404.html">Cambios y devoluciones</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 p-3 footer-div">
+          <h4>INFORMACIÓN</h4>
+        <ul class="list-group list-group-flush ">
+          <li class="list-group-item"><a href="./pages/error404.html">Preguntas frecuentes</a></li>
+          <li class="list-group-item"><a href="./pages/error404.html">Política de Privacidad</a></li>
+          <li class="list-group-item"><a href="./pages/error404.html">Aviso Legal</a></li>
+          <li class="list-group-item"><a href="./pages/sobrenosotros.html">Sobre nosotros</a></li>  
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 footer-div row align-items-center justify-content-center justify-content-around mx-0">
+        <div class="col-3 col-md-12 contact-icon"><a href="https://www.facebook.com" target="_blank"><img class="img-fluid" src="./Assets/iconos footer/facebook.png" alt="facebook-icon"></a></div>
+
+        <div class="col-3 col-md-12 contact-icon"><a href="https://www.instagram.com" target="_blank"><img class="img-fluid" src="./Assets/iconos footer/instagram.png" alt="insta-icon"></a></div>
+
+        <div class="col-3 col-md-12 contact-icon"><a href="https://web.whatsapp.com" target="_blank"><img class="img-fluid" src="./Assets/iconos footer/whatsapp.png" alt="wp-icon"></a></div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>

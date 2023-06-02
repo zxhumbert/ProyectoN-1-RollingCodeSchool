@@ -1,0 +1,530 @@
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+/* ----------Navbar --------------- */
+.navbar {
+    background-color: black ;
+}
+.navbar a{
+color: #00FF00
+}
+.dropdown-menu{
+    background-color: #333333;
+}
+.modal-content{
+    background-color:#333333;
+    color:#00ff00;
+}
+#emailHelp{
+    color: rgba(245, 245, 245, 0.362);
+}
+.buscar{
+    width: 200px;
+}
+
+@media (min-width: 1024px) {
+    .navtext{
+        margin-left: 230px;
+    }
+    
+}
+/* Navbar Seccion Mujer */
+
+.navMujer a{
+    color: #FF007F;
+}
+.modal-content-mujer{
+    background-color:#333333;
+    color:#FF007F;
+}
+
+.buscarMujer{
+    color: #FF007F;
+    border-color: #FF007F;
+}
+
+.buscarMujer:hover{
+    
+    background-color: #FF007F;
+    border-color: #FF007F;
+}
+/* Navbar Seccion Niños */
+
+.navNinios a{
+    color: #FFA500;
+}
+
+.modal-content-ninios{
+    background-color:#333333;
+    color:#FFA500;
+}
+
+.buscarNinios{
+    color: #FFA500;
+    border-color: #FFA500;
+}
+
+.buscarNinios:hover{
+    
+    background-color: #FFA500;
+    border-color: #FFA500;
+
+    }
+/* Navbar Seccion Hombres */
+
+.navHombres a{
+    color: #0d6efd;
+}
+
+.modal-content-hombres{
+    background-color:#333333;
+    color:#0d6efd;
+}
+
+.buscarHombres{
+    color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.buscarHombres:hover{
+    
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+
+    }
+/* Registro */
+.modal-footer a {
+    color: white ;
+}
+
+/* ----------Separador de secciones--------------- */
+.fonts3{
+    font-family: 'Syne Mono', monospace;
+}
+   /* ---------Secciones---------- */
+.imagen{
+    box-shadow: 12px 0px 12px 5px rgba(0,0,0,0.2);
+    width: 270px;
+    height: 400px;
+    border-radius: 5px;
+    transition: 750ms;
+}
+.imagen:hover{
+    scale: 1.1;
+    transition: 750ms;
+    filter: grayscale(0);
+}
+.backgroundcolor-sections{
+    background-color: #333333;
+}
+@media (min-width:993px) {
+    .imagen{
+        filter: grayscale(2);
+    }
+
+}
+/* ------------------------------------ */
+/* -------------Footer----------- */
+a{
+    text-decoration: none;
+    color:#00FF00;
+    
+}
+a:hover{
+color: #333333;
+}
+.footer-container{ 
+    background-color: black;
+    
+}
+footer p, h4 {
+    color: whitesmoke;
+}
+.list-group-item{ /*color de fondo de <li> de footer (puede necesitar correccion*/
+    background-color: black ;
+}
+.btn-bd-primary { /*Boton personalizado*/
+    --bs-btn-font-weight: 700;
+    --bs-btn-color: #333333;
+    --bs-btn-bg: var(--bd-violet);
+    --bs-btn-border-color: #333333 ;
+    --bs-btn-border-radius: .5rem;
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+    --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+    --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+  }
+
+.contact-icon{ /*medidas de iconos del footer*/
+    height: 70px;
+    width: 70px;
+}
+.textFooter{
+    font-size: 16px;
+}
+/* --------------------------------------------- */
+/* Footer Seccion Mujer */
+
+.footerMujer a{
+    color:#FF007F;
+}
+
+/* Footer Seccion Niños */
+
+.footerNinios a{
+    color:#FFA500;
+}
+/* Footer Seccion Hombres */
+
+.footerHombres a{
+    color:#0d6efd;
+}
+
+/*Estilos carrousel de videos*/
+
+.contenedor-carrusel{
+    height: 600px; background-color: whitesmoke;
+}
+/* Tarjetas Dama*/
+
+.boton-color-damas {
+    background-color:#FF007F;
+    }
+    
+.boton-color-damas:hover {
+    background-color:#FF007F;
+        }
+        
+
+/* Tarjetas Niños */
+
+.boton-color-ninios {
+    background-color: #FFA500;
+    }
+    
+.boton-color-ninios:hover {
+    background-color: #FFA500;
+        }
+
+/* Tarjetas hombres */
+
+.boton-color-hombres {
+    background-color: #0d6efd;
+    }
+    
+.boton-color-hombres:hover {
+    background-color: #0d6efd;
+        }
+/* Carrito de compras */
+.boton-carrito{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+@media (min-width: 1024px) {
+    .boton-carrito:hover {    
+        animation-name: shake-center;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: none;
+
+}
+
+@keyframes shake-center {
+			
+    0% {
+        transform:rotate(0deg);
+        transform-origin:50% 50%;
+    }
+    10% {
+        transform:rotate(8deg);
+    }
+    20% {
+        transform:rotate(-10deg);
+    }
+    30% {
+        transform:rotate(10deg);
+    }
+    40% {
+        transform:rotate(-10deg);
+    }
+    50% {
+        transform:rotate(10deg);
+    }
+    60% {
+        transform:rotate(-10deg);
+    }
+    70% {
+        transform:rotate(10deg);
+    }
+    80% {
+        transform:rotate(-8deg);
+    }
+    90% {
+        transform:rotate(8deg);
+    }
+    100% {
+        transform:rotate(0deg);
+        transform-origin:50% 50%;
+    }
+}
+}
+    
+
+#offcanvasCarrito{
+    background-color: white;
+}
+#carritoLabel{
+    color: #333333;
+}
+#carritoHome{
+    background-color: #00FF00;
+}
+#carritoDamas{
+    background-color: #FF007F;
+}
+#carritoHombres{
+    background-color: #0d6efd;
+}
+#carritoNinios{
+    background-color: #FFA500;
+}
+/* Error page */
+.errorPage{
+    width: 100vw;
+    height: 100vh;
+    background-color: #333333;
+    background-image: url(../Assets/Logo/logo-icon-navbar.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;  
+    
+}
+
+.errorPage h3, .errorPage h1 {
+    color: #0d6efd;
+    font-size: 3em;
+    font-weight: 700;
+    font-style: oblique;
+}
+@media (max-width:768px) {
+    .errorPage h3,h1{
+        font-size: 1.5em;
+    }
+}
+footer h5{color:#00FF00;}
+
+footer h6{
+    color: whitesmoke;
+}
+
+/* Modal Suscribirse */
+
+.logoModal{
+    height: 35px;
+    width: 40px;
+    margin-bottom: 8px;
+}
+
+.botonCerrar{
+    background-color: #00FF00;
+    color: black;
+}
+
+/* Modal Sucribirse Mujer */
+
+.texth5ModalMujer{
+    color: #FF007F;
+}
+
+.texth1ModalMujer{
+    color:#FF007F;
+}
+
+.botonCerrarMujer{
+    background-color: #FF007F;
+    color:#333333;
+}
+
+/* Modal Suscribirse Hombre */
+
+.texth5ModalHombre{
+    color:#0d6efd;
+}
+
+.texth1ModalHombre{
+    color:#0d6efd;
+}
+
+.botonCerrarHombre{
+    background-color: #0d6efd;
+    color: #333333;  
+}
+
+/* Modal Suscribirse Niños */
+
+.texth1ModalNinios{
+    color:#FFA500;
+}
+
+.texth5ModalNinios{
+    color: #FFA500;
+}
+
+.botonCerrarNinios{
+    background-color: #FFA500;
+    color: #333333;
+}
+/* Seccion Sobre nosotros */
+.sobreNosotros{
+    background: #757F9A;
+    background: -webkit-linear-gradient(to left, #D7DDE8, #757F9A);
+    background: linear-gradient(to left, #D7DDE8 30%, #757F9A 100%);
+}
+
+.cardContainer{
+    width: 600px;
+    height: 500px;
+}
+.memberCard{
+    width: 0px;
+    flex-grow: 1;
+    background-color:white ;
+    opacity: .8;
+    transition: 1.5s; 
+}
+.memberCard:hover{
+	width: 200px;
+	opacity: 1;
+	filter: contrast(120%);
+}
+.memberDescription{
+	display: none;
+}
+.memberDescription h4 {
+	color: #262626;
+}
+.memberCard:hover .memberDescription{
+	display: block;
+	animation-name: flip-in-horizontal;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+}
+@keyframes flip-in-horizontal {
+	0% {
+		transform:rotateX(-80deg);
+		opacity:0;
+	}
+	100% {
+		transform:rotateX(0);
+		opacity:1;
+	}
+}
+#memberCard1{
+    background-image: url(../Assets/sobrenosotros/dana.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+#memberCard2{
+    background-image: url(../Assets/sobrenosotros/matiroger.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+#memberCard3{
+    background-image: url(../Assets/sobrenosotros/matirossi.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+#memberCard4{
+    background-image: url(../Assets/sobrenosotros/bauti.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+#memberCard5{
+    background-image: url(../Assets/sobrenosotros/humberto.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+#memberCard1:hover{
+    transition: 1.5s;
+    background-size: contain;
+    background-position: top;
+}
+#memberCard2:hover{
+    transition: 1.5s;
+    background-size: contain;
+    background-position: top;
+}
+#memberCard3:hover{
+    transition: 1.5s;
+    background-size: contain;
+    background-position: top;
+}
+#memberCard4:hover{
+    transition: 1.5s;
+    background-size: contain;
+    background-position: top;
+}
+#memberCard5:hover{
+    transition: 1.5s;
+    background-size: contain;
+    background-position: top;
+}
+.lista{
+    list-style: none;
+}
+.lista a {
+  width: 55px;
+  display:block;
+  text-align: center;
+  margin: 5px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fab {
+  display:block;
+  background: linear-gradient(0deg, #fff, #d5d4d4);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size: 20px;
+  color: #262626;
+  transition: .5s;
+}
+
+.lista  li:nth-child(1) a:hover .fab {
+    color: #00aeff;
+}
+
+.lista  li:nth-child(2) a:hover .fab {
+    color: #0041cc;
+}
+
+.lista  li:nth-child(3) a:hover .fab {
+    color:  #dc2743
+}
+@media (max-width:576px) {
+	.cardContainer{
+		width: 100vw;
+	}
+}
+
+
+
+
+

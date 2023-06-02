@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportSize/hombres</title>
+    <link rel="shortcut icon" href="../Assets/Logo/logo-icon-navbar.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navHombres">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img class="ms-2" width="30px" height="27px" src="../Assets/Logo/logo-icon-navbar.png" alt="logo de la marca"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContenido">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-center navtext">
+            <li class="nav-item">  
+              <a href="#" class="text-decoration-none nav-link activate" data-bs-toggle="modal" data-bs-target="#modalRegistrate">Registrate</a>  
+              <div class="modal fade" id="modalRegistrate" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content modal-content-hombres">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modalLabel">Regístrate</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                  <form> 
+                    <div class="mb-3">
+                      <label for="fullName" class="form-label">Nombre Completo</label>
+                      <input type="Text" class="form-control" id="fulName">
+                    </div>
+                    <div class="mb-3">
+                      <label for="emailLabel" class="form-label">Correo Electronico</label>
+                      <input type="email" class="form-control" id="emailLabel" aria-describedby="emailHelp"> 
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="userPass" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="userPass">
+                    </div>
+                    <div class="mb-3">
+                      <label for="passConfirm" class="form-label">Confirmar contraseña</label>
+                      <input type="password" class="form-control" id="passConfirm">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <a type="button" href="./error404.html" class="btn btn-primary">Enviar</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Todos los productos</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./secciondamas.html">Mujer</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./seccionhombres.html">Hombre</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./seccionninios.html">Niños</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./sobrenosotros.html">Sobre Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <div class="boton-carrito d-flex justify-content-center p-1 m-2" id="carritoHombres">
+                  <a  data-bs-toggle="offcanvas" href="#offcanvasCarrito" role="button" aria-controls="offcanvasExample">
+                    <img src="../Assets/shopping-cart.png" alt="carrito-compras" class="w-100">
+                  </a>
+                </div>
+              </li>
+            </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 buscar" type="search" placeholder="Buena suerte!" aria-label="Search">
+          <a href="./error404.html" class="btn btn-outline-success buscarHombres" type="submit">Buscar</a>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container-fluid row justify-content-evenly seccionHombres">
+      <div class="col-10 text-center mt-4 mb-4 p-0 " >
+        <img src="../Assets/Logo/logo-presentacion.png" alt="logo de la marca" height="70px"> 
+      </div>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="carritoLabel">
+        <div class="offcanvas-header">
+          <h4 class="offcanvas-title" id="carritoLabel">Carrito</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio unitario</th>
+                <th scope="col">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+            </tbody>
+          </table>
+          <div class="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+            <img src="../Assets/bolsa-de-la-compra.png" width="80px" height="auto" alt="">
+            <p>Su carrito está vacío</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-0 border col-10 col-md-5 col-lg-3 m-2 mb-5">
+        <img src="../Assets/seccion hombres/iamgen-1.webp" class= "card-img-top width-100%" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Liverpool FC Strike</h5>
+          <p class="card-text"> Precio de venta $20.999 ARS</p>
+          <div class="d-flex justify-content-around talle border-top p-3">
+            <input type="radio" class="btn-check" name="talle1" id="talleS-1" autocomplete="off">
+            <label class="btn btn-outline-success" for="talleS-1">S</label>
+            <input type="radio" class="btn-check" name="talle1" id="talleM-1" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleM-1">M</label>
+            <input type="radio" class="btn-check" name="talle1" id="talleL-1" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleL-1">L</label>
+            <input type="radio" class="btn-check" name="talle1" id="talleXL-1" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleXL-1">XL</label>
+          </div>
+          <div class="d-flex justify-content-center carrito">
+            <a href="#" class="btn boton-color-hombres text-light">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-0 border col-10 col-md-5 col-lg-3 m-2 mb-5">
+        <img src="../Assets/seccion hombres/imagen-2.webp" class= "card-img-top width-100%" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Dri-FIT Run Division Rise 365</h5>
+          <p class="card-text"> Precio de venta $23.999 ARS</p>
+          <div class="d-flex justify-content-around talle border-top p-3">
+            <input type="radio" class="btn-check" name="talle2" id="talleS-2" autocomplete="off">
+            <label class="btn btn-outline-success" for="talleS-2">S</label>
+            <input type="radio" class="btn-check" name="talle2" id="talleM-2" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleM-2">M</label>
+            <input type="radio" class="btn-check" name="talle2" id="talleL-2" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleL-2">L</label>
+            <input type="radio" class="btn-check" name="talle2" id="talleXL-2" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleXL-2">XL</label>
+          </div>
+          <div class="d-flex justify-content-center carrito">
+            <a href="#" class="btn boton-color-hombres text-light ">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="card p-0 border col-10 col-md-5 col-lg-3 m-2 mb-5">
+        <img src="../Assets/seccion hombres/imagen-3.webp" class= "card-img-top width-100%" alt="">
+        
+        <div class="card-body">
+          <h5 class="card-title">Dri-FIT Miler</h5>
+          <p class="card-text"> Precio de venta $14.499 ARS</p>
+          <div class="d-flex justify-content-around talle border-top p-3">
+            <input type="radio" class="btn-check" name="talle3" id="talleS-3" autocomplete="off">
+            <label class="btn btn-outline-success" for="talleS-3">S</label>
+            <input type="radio" class="btn-check" name="talle3" id="talleM-3" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleM-3">M</label>
+            <input type="radio" class="btn-check" name="talle3" id="talleL-3" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleL-3">L</label>
+            <input type="radio" class="btn-check" name="talle3" id="talleXL-3" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleXL-3">XL</label>
+          </div>
+          <div class="d-flex justify-content-center carrito">
+            <a href="#" class="btn boton-color-hombres text-light ">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-0 border col-10 col-md-5 col-lg-3 m-2 mb-5">
+        <img src="../assets/seccion hombres/imagen-4.webp" class= "card-img-top width-100%" alt="">
+        
+        <div class="card-body">
+          <h5 class="card-title">Sportswear</h5>
+          <p class="card-text"> Precio de venta $33.499 ARS</p>
+          <div class="d-flex justify-content-around talle border-top p-3">
+            <input type="radio" class="btn-check" name="talle4" id="talleS-4" autocomplete="off">
+            <label class="btn btn-outline-success" for="talleS-4">S</label>
+            <input type="radio" class="btn-check" name="talle4" id="talleM-4" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleM-4">M</label>
+            <input type="radio" class="btn-check" name="talle4" id="talleL-4" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleL-4">L</label>
+            <input type="radio" class="btn-check" name="talle4" id="talleXL-4" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleXL-4">XL</label>
+          </div>
+          <div class="d-flex justify-content-center carrito">
+            <a href="#" class="btn boton-color-hombres text-light ">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-0 border col-10 col-md-5 col-lg-3 m-2 mb-5">
+        <img src="../assets/seccion hombres/imagen-5.webp" class= "card-img-top width-100%" alt="">
+      
+        <div class="card-body">
+          <h5 class="card-title">Paris Saint-Germain</h5>
+          <p class="card-text"> Precio de venta $29.999 ARS</p>
+          <div class="d-flex justify-content-around talle border-top p-3">
+            <input type="radio" class="btn-check" name="talle5" id="talleS-5" autocomplete="off">
+            <label class="btn btn-outline-success" for="talleS-5">S</label>
+            <input type="radio" class="btn-check" name="talle5" id="talleM-5" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleM-5">M</label>
+            <input type="radio" class="btn-check" name="talle5" id="talleL-5" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleL-5">L</label>
+            <input type="radio" class="btn-check" name="talle5" id="talleXL-5" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleXL-5">XL</label>
+          </div>
+          <div class="d-flex justify-content-center carrito">
+            <a href="#" class="btn boton-color-hombres text-light ">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-0 border col-10 col-md-5 col-lg-3 m-2 mb-5">
+        <img src="../assets/seccion hombres/imagen-6.webp" class= "card-img-top width-100%" alt="">
+      
+        <div class="card-body">
+          <h5 class="card-title">Jordan Flight MVP</h5>
+          <p class="card-text"> Precio de venta $33.499 ARS</p>
+          <div class="d-flex justify-content-around talle border-top p-3">
+            <input type="radio" class="btn-check" name="talle6" id="talleS-6" autocomplete="off">
+            <label class="btn btn-outline-success" for="talleS-6">S</label>
+            <input type="radio" class="btn-check" name="talle6" id="talleM-6" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleM-6">M</label>
+            <input type="radio" class="btn-check" name="talle6" id="talleL-6" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleL-6">L</label>
+            <input type="radio" class="btn-check" name="talle6" id="talleXL-6" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleXL-6">XL</label>
+          </div>
+          <div class="d-flex justify-content-center carrito">
+            <a href="#" class="btn boton-color-hombres text-light ">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="card p-0 border col-10 col-md-5 col-lg-3 m-2 mb-5">
+        <img src="../Assets/seccion hombres/imagen-7.webp" class= "card-img-top width-100%" alt="">
+        
+        <div class="card-body">
+          <h5 class="card-title">Jordan Brooklyn Fleece</h5>
+          <p class="card-text"> Precio de venta 27.999 ARS</p>
+          <div class="d-flex justify-content-around talle border-top p-3">
+            <input type="radio" class="btn-check" name="talle7" id="talleS-7" autocomplete="off">
+            <label class="btn btn-outline-success" for="talleS-7">S</label>
+            <input type="radio" class="btn-check" name="talle7" id="talleM-7" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleM-7">M</label>
+            <input type="radio" class="btn-check" name="talle7" id="talleL-7" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleL-7">L</label>
+            <input type="radio" class="btn-check" name="talle7" id="talleXL-7" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleXL-7">XL</label>
+          </div>
+          <div class="d-flex justify-content-center carrito">
+            <a href="#" class="btn boton-color-hombres text-light ">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-0 border col-10 col-md-5 col-lg-3 m-2 mb-5">
+        <img src="../assets/seccion hombres/imagen-8.webp" class= "card-img-top width-100%" alt="">
+        
+        <div class="card-body">
+          <h5 class="card-title">Artist Series by Jacob Rochester</h5>
+          <p class="card-text"> Precio de venta $37.999 ARS</p>
+          <div class="d-flex justify-content-around talle border-top p-3">
+            <input type="radio" class="btn-check" name="talle8" id="talleS-8" autocomplete="off">
+            <label class="btn btn-outline-success" for="talleS-8">S</label>
+            <input type="radio" class="btn-check" name="talle8" id="talleM-8" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleM-8">M</label>
+            <input type="radio" class="btn-check" name="talle8" id="talleL-8" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleL-8">L</label>
+            <input type="radio" class="btn-check" name="talle8" id="talleXL-8" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleXL-8">XL</label>
+          </div>
+          <div class="d-flex justify-content-center carrito">
+            <a href="#" class="btn boton-color-hombres text-light ">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-0 border col-10 col-md-5 col-lg-3 m-2 mb-5">
+        <img src="../assets/seccion hombres/imagen-9.webp" class= "card-img-top width-100%" alt="">
+      
+        <div class="card-body">
+          <h5 class="card-title">Solo Swoosh</h5>
+          <p class="card-text"> Precio de venta $37.999 ARS</p>
+          <div class="d-flex justify-content-around talle border-top p-3">
+            <input type="radio" class="btn-check" name="talle9" id="talleS-9" autocomplete="off">
+            <label class="btn btn-outline-success" for="talleS-9">S</label>
+            <input type="radio" class="btn-check" name="talle9" id="talleM-9" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleM-9">M</label>
+            <input type="radio" class="btn-check" name="talle9" id="talleL-9" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleL-9">L</label>
+            <input type="radio" class="btn-check" name="talle9" id="talleXL-9" autocomplete="off" >
+            <label class="btn btn-outline-success" for="talleXL-9">XL</label>
+          </div>
+          <div class="d-flex justify-content-center carrito">
+            <a href="#" class="btn boton-color-hombres text-light ">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class=" container-fluid row p-4  footer-container mx-0 footerHombres">
+      <div class="col-12 col-md-3 p-3 footer-div row gap-2">
+        <h4>Unete a nuestro newsletter</h4>
+        <p>Tendras acceso a las ultimas tendencias, ofertas y más.</p>
+        <input type="email" name="userMail" id="mailUsuario" placeholder="Tu correo" class="form-control-lg col-md-12 col-lg-8 textFooter ms-2 mb-2">
+        <button type="submit" class="btn  btn-bd-primary col-md-10 col-lg-7 ms-2" data-bs-toggle="modal" data-bs-target="#suscribirseHombre">SUSCRIBIRSE</button>
+        <div class="modal fade" id="suscribirseHombre" tabindex="-1" aria-labelledby="SuscribirseHombre" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 texth1ModalHombre" id="SuscribirseHombre">Registro Exitoso</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="d-flex justify-content-center">
+                  <img class=logoModal src="../Assets/Logo/logo-icon-navbar.png" alt="icono">
+                </div>
+                <h5 class="texth5ModalHombre">Bienvenido!</h5>
+                <h6>En unos minutos comprueba tu correo para confirmar tu suscripción a SportSize.</h6>
+                <h6>Podrás estar al tanto sobre las ultimas tendencias, novedades, ofertas exclusivas para socios, y mucho más! </h6>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary botonCerrarHombre" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 p-3 footer-div">
+        <h4>AYUDA</h4>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="./error404.html">Envíos y Entregas</a></li>
+          <li class="list-group-item"><a href="./error404.html">Cambios y devoluciones</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 p-3 footer-div">
+        <h4>INFORMACIÓN</h4>
+      <ul class="list-group list-group-flush ">
+        <li class="list-group-item"><a href="./error404.html">Preguntas frecuentes</a></li>
+        <li class="list-group-item"><a href="./error404.html">Política de Privacidad</a></li>
+        <li class="list-group-item"><a href="./error404.html">Aviso Legal</a></li>
+        <li class="list-group-item"><a href="./sobrenosotros.html">Sobre nosotros</a></li>  
+      </ul>
+    </div>
+    <div class="col-12 col-md-3 footer-div row align-items-center justify-content-center justify-content-around mx-0">
+      <div class="col-3 col-md-12 contact-icon"><a href="https://www.facebook.com" target="_blank"><img class="img-fluid" src="../Assets/iconos footer/facebook.png" alt="facebook-icon"></a></div>
+
+      <div class="col-3 col-md-12 contact-icon"><a href="https://www.instagram.com" target="_blank"><img class="img-fluid" src="../Assets/iconos footer/instagram.png" alt="insta-icon"></a></div>
+
+      <div class="col-3 col-md-12 contact-icon"><a href="https://web.whatsapp.com" target="_blank"><img class="img-fluid" src="../Assets/iconos footer/whatsapp.png" alt="wp-icon"></a></div>
+    </div>
+  </footer> 
+
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>
